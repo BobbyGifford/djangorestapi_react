@@ -27,7 +27,7 @@ const Articles = props => {
           onChange: page => {
             console.log(page);
           },
-          pageSize: 3
+          pageSize: 4
         }}
         dataSource={props.data}
         renderItem={item => (
@@ -48,7 +48,7 @@ const Articles = props => {
           >
             <List.Item.Meta
               avatar={<Avatar src={item.avatar} />}
-              title={<a href={`/${item.id}`}>{item.title}</a>}
+              title={<a href={`/articles/${item.id}`}>{item.title}</a>}
               description={item.description}
             />
             {item.content}
